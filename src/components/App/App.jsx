@@ -2,6 +2,10 @@ import Bookings from "@/components/Bookings/Bookings.jsx";
 import "./App.scss";
 import AppHeader from "../AppHeader/AppHeader";
 import Footer from "../Footer/Footer";
+import Deck from "../Deck/Deck";
+// import Card from "../Card/Card";
+// import cardsData from "@/data/fakeCards.json";
+
 const address = [
   "123 Fake Street, London, E1 4UD",
   "hello@fakehotel.com",
@@ -11,6 +15,7 @@ const address = [
 const App = () => (
   <div className="app">
     <AppHeader />
+    <Deck />
     <Bookings />
     <Footer address={address} />
   </div>

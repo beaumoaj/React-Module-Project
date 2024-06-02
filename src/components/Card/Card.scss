@@ -8,9 +8,10 @@
 
   &__title {
     grid-area: title;
+
   }
   &__image {
     grid-area: image;
-    mix-blend-mode: overlay;
+    //mix-blend-mode: overlay;
   }
 }
