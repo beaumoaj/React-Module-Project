@@ -1,7 +1,13 @@
+import dayjs from "dayjs";
+import customParseFormat from "dayjs/plugin/customParseFormat";
+
 const SearchRow = ({ result }) => {
   //console.log("---SearchRow--- " + result.id);
   //console.log(result);
-
+  dayjs.extend(customParseFormat);
+  const startDate = dayjs(result.checkInDate, "YYYY-MM-DD");
+  const endDate = dayjs(result.checkOutDate, "YYYY-MM-DD");
+  const days = endDate.diff(startDate, "day");
   return (
     <tr key={"searchrow_tr_" + result.id}>
       <td key={"search_row_id_" + result.id}>{result.id}</td>
@@ -12,6 +18,7 @@ const SearchRow = ({ result }) => {
       <td key={"roomID_" + result.id}>{result.roomId}</td>
       <td key={"checkin_" + result.id}>{result.checkInDate}</td>
       <td key={"checkout_" + result.id}>{result.checkOutDate}</td>
+      <td key={"days_" + result.id}>{days}</td>
     </tr>
   );
 };

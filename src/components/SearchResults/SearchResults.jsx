@@ -31,6 +31,9 @@ const SearchResults = ({ results }) => {
             <th key={"srthCO"} scope="col">
               Check-out
             </th>
+            <th key={"srthDAYS"} scope="col">
+              Days
+            </th>
           </tr>
         </thead>
         <tbody key="srtb">
