@@ -2,9 +2,9 @@ import "./Footer.scss";
 
 const Footer = ({ address }) => (
   <footer className="app__footer">
-    <ul>
+    <ul key="footer_list">
       {address.map((line, index) => (
-        <li key={index}>{line}</li>
+        <li key={"footer_item_" + index}>{line}</li>
       ))}
     </ul>
   </footer>

@@ -1,8 +1,10 @@
 const SearchRow = ({ result }) => {
-  console.log(result);
+  //console.log("---SearchRow--- " + result.id);
+  //console.log(result);
+
   return (
-    <tr key={"tr" + result.id}>
-      <td key={"id_" + result.id}>{result.id}</td>
+    <tr key={"searchrow_tr_" + result.id}>
+      <td key={"search_row_id_" + result.id}>{result.id}</td>
       <td key={"title_" + result.id}>{result.title}</td>
       <td key={"first_" + result.id}>{result.firstName}</td>
       <td key={"last_" + result.id}>{result.surname}</td>

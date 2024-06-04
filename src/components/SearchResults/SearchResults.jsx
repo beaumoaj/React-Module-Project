@@ -3,39 +3,39 @@ import SearchRow from "./SearchRow";
 
 const SearchResults = ({ results }) => {
   return (
-    <div className="search-results">
+    <div key="search_results" className="search-results">
       <table key="srtable" className="table  table-bordered">
         <thead key="srth" className="thead-light">
           <tr>
-            <th key={"thID"} scope="col">
+            <th key={"srthID"} scope="col">
               ID
             </th>
-            <th key={"thTitle"} scope="col">
+            <th key={"srthTitle"} scope="col">
               Title
             </th>
-            <th key={"thFIRST"} scope="col">
+            <th key={"srthFIRST"} scope="col">
               First Name
             </th>
-            <th key={"thLAST"} scope="col">
+            <th key={"srthLAST"} scope="col">
               Surname
             </th>
-            <th key={"thEMAIL"} scope="col">
+            <th key={"srthEMAIL"} scope="col">
               Email
             </th>
-            <th key={"thROOM"} scope="col">
+            <th key={"srthROOM"} scope="col">
               Room Num
             </th>
-            <th key={"thCI"} scope="col">
+            <th key={"srthCI"} scope="col">
               Check-in
             </th>
-            <th key={"thCO"} scope="col">
+            <th key={"srthCO"} scope="col">
               Check-out
             </th>
           </tr>
         </thead>
         <tbody key="srtb">
-          {results.map((result) => (
-            <SearchRow result={result} />
+          {results.map((result, index) => (
+            <SearchRow key={"xyz" + index} result={result} />
           ))}
         </tbody>
       </table>
