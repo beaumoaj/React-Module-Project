@@ -1,33 +1,41 @@
 import "./SearchResults.scss";
+import SearchRow from "./SearchRow";
 
 const SearchResults = ({ results }) => {
   return (
     <div className="search-results">
-      <table class="table  table-bordered">
-        <thead class="thead-light">
+      <table key="srtable" className="table  table-bordered">
+        <thead key="srth" className="thead-light">
           <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Title</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Surname</th>
-            <th scope="col">Email</th>
-            <th scope="col">Room Num</th>
-            <th scope="col">Check-in</th>
-            <th scope="col">Check-out</th>
+            <th key={"thID"} scope="col">
+              ID
+            </th>
+            <th key={"thTitle"} scope="col">
+              Title
+            </th>
+            <th key={"thFIRST"} scope="col">
+              First Name
+            </th>
+            <th key={"thLAST"} scope="col">
+              Surname
+            </th>
+            <th key={"thEMAIL"} scope="col">
+              Email
+            </th>
+            <th key={"thROOM"} scope="col">
+              Room Num
+            </th>
+            <th key={"thCI"} scope="col">
+              Check-in
+            </th>
+            <th key={"thCO"} scope="col">
+              Check-out
+            </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody key="srtb">
           {results.map((result) => (
-            <tr key={result.id} className="search-results__item">
-              <td>{result.id}</td>
-              <td>{result.title}</td>
-              <td>{result.firstName}</td>
-              <td>{result.surname}</td>
-              <td>{result.email}</td>
-              <td>{result.roomId}</td>
-              <td>{result.checkInDate}</td>
-              <td>{result.checkOutDate}</td>
-            </tr>
+            <SearchRow result={result} />
           ))}
         </tbody>
       </table>
