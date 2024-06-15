@@ -4,3 +4,17 @@
   justify-content: center;
   margin-top: 20px;
 }
+
+.search-results__item {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+}
+
+.search-results__itemselected {
+  background-color: #ababab;
+  color: #000;
+}

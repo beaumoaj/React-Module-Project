@@ -3,6 +3,7 @@ import "./App.scss";
 import AppHeader from "../AppHeader/AppHeader";
 import Footer from "../Footer/Footer";
 import Deck from "../Deck/Deck";
+import Restaurant from "../Restaurant/Restaurant";
 // import Card from "../Card/Card";
 // import cardsData from "@/data/fakeCards.json";
 
@@ -17,6 +18,7 @@ const App = () => (
     <AppHeader />
     <Deck />
     <Bookings />
+    <Restaurant />
     <Footer address={address} />
   </div>
 );

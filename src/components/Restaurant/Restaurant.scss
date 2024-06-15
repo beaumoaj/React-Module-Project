@@ -1,0 +1,8 @@
+label {
+  color: #b4886b;
+  font-weight: bold;
+  display: block;
+}
+label:after {
+  content: ": ";
+}

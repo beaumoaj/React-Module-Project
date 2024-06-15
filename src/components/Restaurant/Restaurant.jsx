@@ -1,13 +1,14 @@
+import Order from "./Order";
+import "./Restaurant.scss";
+
 const Restaurant = () => {
-  const pizzas = 0;
   return (
     <section className="restaurant">
       <h3 className="restaurant__heading">Restaurant Orders</h3>
       <ul className="restaurant__list">
-        <li className="restaurant__item">
-          Pizzas: {pizzas}{" "}
-          <button className="button restaurant__button">Add</button>
-        </li>
+        <Order orderType="Pizzas" />
+        <Order orderType="Salad" />
+        <Order orderType="Chocolate Cake" />
       </ul>
     </section>
   );
